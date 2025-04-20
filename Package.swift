@@ -14,14 +14,14 @@ let package = Package(
     .target(name: "ObsidianCore", path: "Core/Source"),
     .testTarget(
       name: "ObsidianCoreTests",
-      dependencies: ["ObsidianTesting"],
+      dependencies: ["ObsidianCore", "ObsidianTesting"],
       path: "Core/Tests"
     ),
     
     .target(name: "ObsidianFoundation", path: "Foundation/Source"),
     .testTarget(
       name: "ObsidianFoundationTests",
-      dependencies: ["ObsidianTesting"],
+      dependencies: ["ObsidianFoundation", "ObsidianTesting"],
       path: "Foundation/Tests"
     ),
 
